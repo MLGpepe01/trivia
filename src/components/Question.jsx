@@ -15,7 +15,9 @@ class Question extends Component {
   handleClick(index) {
     var ca = this.props.currentQuestion.canswer;
     if (index === ca) {
-      this.setState({ questiontext: this.props.currentQuestion.answers[ca] });
+      this.setState({ questiontext: "correct answer" });
+    } else if (index !== ca) {
+      this.setState({ questiontext: "Wrong!" });
     }
   }
   render() {
@@ -24,7 +26,7 @@ class Question extends Component {
         <QuestionText questiontext={this.state.questiontext} />
         <Answer
           answertext={this.props.currentQuestion.answers[0]}
-          onanswerclick={index => this.handleClickindex()}
+          onanswerclick={index => this.handleClick(index)}
           index={0}
         />
         <Answer
