@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       currentQuestion: {
         questiontext: "sdfghj",
-        answers: ["Gulag", "Gulag", "Gulag", "Gulag"],
+        answers: ["Un", "Deux", "HI", "Quatre"],
         canswer: 1
       }
     };

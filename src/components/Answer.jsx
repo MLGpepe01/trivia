@@ -4,7 +4,9 @@ class Answer extends Component {
   render() {
     return (
       <div>
-        <button>{this.props.answertext}</button>
+        <button onClick={() => this.props.onanswerclick(this.props.index)}>
+          {this.props.answertext}
+        </button>
       </div>
     );
   }
