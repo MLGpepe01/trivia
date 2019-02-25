@@ -3,7 +3,11 @@ import React, { Component } from "react";
 
 class QuestionText extends Component {
   render() {
-    return <div>{this.props.questiontext}</div>;
+    return (
+      <div>
+        <font color={this.props.color}>{this.props.questiontext}</font>
+      </div>
+    );
   }
 }
 
