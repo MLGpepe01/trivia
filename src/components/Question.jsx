@@ -17,10 +17,12 @@ class Question extends Component {
     var ca = this.props.currentQuestion.canswer;
     if (index === ca) {
       this.setState({ questiontext: "correct answer" });
+
       this.setState({ questioncolor: "green" });
     } else if (index !== ca) {
       this.setState({ questiontext: "Wrong!" });
       this.setState({ questioncolor: "red" });
+
     }
   }
 

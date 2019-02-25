@@ -10,6 +10,7 @@ class App extends Component {
         questiontext: "sdfghj",
         answers: ["Un", "Deux", "HI", "Quatre"],
         canswer: 1
+
       }
     };
   }
