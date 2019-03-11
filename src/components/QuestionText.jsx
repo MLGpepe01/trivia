@@ -10,5 +10,4 @@ class QuestionText extends Component {
     );
   }
 }
-
 export default QuestionText;

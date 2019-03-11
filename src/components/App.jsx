@@ -12,6 +12,7 @@ class App extends Component {
         question_text: "Question",
         choices: [],
         correct_choice_index: null
+
       }
     };
 
