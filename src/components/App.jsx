@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Question from "./Question";
+import { buildFirebase, getRandomQuestion } from "../clients/firebase";
+
 // import components
 
 class App extends Component {
@@ -7,12 +9,19 @@ class App extends Component {
     super(props);
     this.state = {
       currentQuestion: {
-        questiontext: "sdfghj",
-        answers: ["Un", "Deux", "HI", "Quatre"],
-        canswer: 1
+        question_text: "Question",
+        choices: [],
+        correct_choice_index: null
 
       }
     };
+
+    var firebaseDatabase = buildFirebase();
+    firebaseDatabase.ref("/questions").on("value", snapshot => {
+      var snapshot = snapshot.val();
+      var question = getRandomQuestion(snapshot);
+      this.setState({ currentQuestion: question });
+    });
   }
 
   render() {
