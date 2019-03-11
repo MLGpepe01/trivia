@@ -4,8 +4,8 @@ import React, { Component } from "react";
 class QuestionText extends Component {
   render() {
     return (
-      <div>
-        <font color={this.props.color}>{this.props.questiontext}</font>
+      <div class="question">
+        <font color={this.props.color}>{this.props.question_text}</font>
       </div>
     );
   }
