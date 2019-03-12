@@ -4,8 +4,7 @@ body {
   background: linear-gradient(to right, lightgreen, #12d8fa, orange);
 }
 button {
-  height: 25px;
-  width: 70px;
+  width: 100px;
   border-radius: 20px;
 }
 .question {
@@ -13,33 +12,35 @@ button {
   height: 100px;
   width: 200px;
   position: relative;
-  top: 300px;
-  left: 40%;
+  top: 350px;
+  left: 45%;
   background-color: silver;
+  border: 5px solid gray;
+  border-radius: 20px;
 }
 .app {
   text-align: center;
 }
 .buckets {
-  height: 30px;
-  width: 200px;
+  height: 1px;
+  width: 1px;
   position: relative;
-  top: 200px;
-  left: 40%;
+  top: 300px;
+  left: 50%;
 }
 .buckets div {
   position: absolute;
   animation: bucket_rotate 40s infinite linear;
-  top: 65%;
+  top: 63%;
   left: 45%;
 }
 
 @keyframes bucket_rotate {
   0% {
-    transform: rotate(0) translateX(200px) rotate(0);
+    transform: rotate(0) translateX(300px) rotate(0);
   }
   100% {
-    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    transform: rotate(360deg) translateX(300px) rotate(-360deg);
   }
 }
 .buckets div:nth-child(2) {
@@ -48,10 +49,8 @@ button {
 
 .buckets div:nth-child(3) {
   animation-delay: -20s;
-  width: 200px;
 }
 
 .buckets div:nth-child(4) {
   animation-delay: -30s;
-  width: 200px;
 }
