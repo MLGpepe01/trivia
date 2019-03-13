@@ -1,12 +1,20 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, lightgreen, #12d8fa, orange);
+  font-family: "Sniglet", cursive;
+  font-size: 20px;
 }
 /* i didi it */
 button {
-  width: 100px;
+  width: 200px;
   border-radius: 20px;
+  font-family: "Sniglet", cursive;
+  font-size: 15px;
+}
+.resetbutton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 .question {
   color: black;
@@ -26,32 +34,60 @@ button {
   height: 1px;
   width: 1px;
   position: relative;
-  top: 300px;
-  left: 50%;
+  top: 230px;
+  left: 45%;
 }
 .buckets div {
   position: absolute;
-  animation: bucket_rotate 40s infinite linear;
-  top: 63%;
+  animation: bucket_rotate 200s infinite linear;
+  top: 50%;
   left: 45%;
 }
 
 @keyframes bucket_rotate {
   0% {
-    transform: rotate(0) translateX(300px) rotate(0);
+    transform: rotate(0) translateX(340px) rotate(0);
   }
   100% {
-    transform: rotate(360deg) translateX(300px) rotate(-360deg);
+    transform: rotate(360deg) translateX(340px) rotate(-360deg);
   }
 }
 .buckets div:nth-child(2) {
-  animation-delay: -10s;
+  animation-delay: -50s;
 }
 
 .buckets div:nth-child(3) {
-  animation-delay: -20s;
+  animation-delay: -100s;
 }
 
 .buckets div:nth-child(4) {
-  animation-delay: -30s;
+  animation-delay: -150s;
+}
+@keyframes bgcolor {
+  0% {
+    background-color: #45a3e5;
+  }
+
+  30% {
+    background-color: #66bf39;
+  }
+
+  60% {
+    background-color: #eb670f;
+  }
+
+  90% {
+    background-color: #f35;
+  }
+
+  100% {
+    background-color: #864cbf;
+  }
+}
+
+body {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 4s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
