@@ -22,7 +22,7 @@ button {
   width: 200px;
   position: relative;
   top: 350px;
-  left: 45%;
+  left: 25%;
   background-color: silver;
   border: 5px solid gray;
   border-radius: 20px;
@@ -34,8 +34,8 @@ button {
   height: 1px;
   width: 1px;
   position: relative;
-  top: 230px;
-  left: 45%;
+  top: 290px;
+  left: 25%;
 }
 .buckets div {
   position: absolute;
