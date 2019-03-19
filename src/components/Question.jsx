@@ -40,7 +40,7 @@ class Question extends Component {
           color={this.state.questioncolor}
           question_text={this.props.currentQuestion.question_text}
         />
-        <div class="buckets">
+        <div className="buckets">
           <Answer
             answertext={this.props.currentQuestion.choices[0]}
             onanswerclick={index => this.handleClick(index)}

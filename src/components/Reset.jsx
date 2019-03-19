@@ -5,7 +5,7 @@ class Reset extends Component {
   render() {
     return (
       <div>
-        <button class="resetbutton">reset</button>
+        <button className="resetbutton">reset</button>
       </div>
     );
   }
