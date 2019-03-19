@@ -17,7 +17,6 @@ class Question extends Component {
   }
   handleClick(index) {
     var ca = this.props.currentQuestion.correct_choice_index;
-    var cnum = 0;
 
     if (index === ca) {
       var ahhs = cnum + 1;
@@ -28,8 +27,8 @@ class Question extends Component {
     } else if (index !== ca) {
       this.setState({ questiontext: "Wrong!" });
       this.setState({ questioncolor: "red" });
-      this.setState({ uscore: cnum++ + 1 });
-      console.log(cnum++ + 1);
+      this.setState({ uscore: cnum + 1 });
+      console.log(cnum + 1);
     }
   }
 
