@@ -19,17 +19,17 @@ class Question extends Component {
     var ca = this.props.currentQuestion.correct_choice_index;
     var cnum = 0;
 
-    var rnum = 0;
     if (index === ca) {
+      var ahhs = cnum + 1;
       this.setState({ questiontext: "correct answer" });
       this.setState({ questioncolor: "green" });
-      this.setState({ uscore: cnum++ + 1 });
-      console.log(cnum);
+      this.setState({ uscore: ahhs });
+      console.log(ahhs);
     } else if (index !== ca) {
       this.setState({ questiontext: "Wrong!" });
       this.setState({ questioncolor: "red" });
-      this.setState({ uscore: rnum++ + 1 });
-      console.log(rnum);
+      this.setState({ uscore: cnum++ + 1 });
+      console.log(cnum++ + 1);
     }
   }
 
