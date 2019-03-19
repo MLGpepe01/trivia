@@ -87,7 +87,7 @@ button {
 
 body {
   -webkit-animation: bgcolor 20s infinite;
-  animation: bgcolor 4s infinite;
+  animation: bgcolor 12s infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
