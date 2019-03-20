@@ -19,7 +19,6 @@ class Question extends Component {
   }
   handleClick(index) {
     var ca = this.props.currentQuestion.correct_choice_index;
-
     if (index === ca) {
       var tca = can++ + 1;
       this.setState({ questiontext: "correct answer" });
