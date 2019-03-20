@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import QuestionText from "./QuestionText.jsx";
 import Reset from "./Reset.jsx";
 import Answer from "./Answer.jsx";
-import Score from "./score.jsx";
+import Score from "./Score.jsx";
 
 // import components
 var can = 0;
@@ -13,24 +13,22 @@ class Question extends Component {
     this.state = {
       questioncolor: this.props.currentQuestion.questioncolor,
       question_text: this.props.currentQuestion.question_text,
-      cscorebored: this.props.cscorebored,
-      rscorebored: this.props.rcorebored
+      cscore: this.prop
     };
   }
   handleClick(index) {
     var ca = this.props.currentQuestion.correct_choice_index;
     if (index === ca) {
       var tca = can++ + 1;
-      this.setState({ questiontext: "correct answer" });
+      this.setState({ question_text: "correct answer" });
       this.setState({ questioncolor: "green" });
-      this.setState({ cscorebored: tca });
-
-      console.log(tca + "corect");
+      this.setState({});
+      console.log(tca + " corect");
     } else if (index !== ca) {
       var tra = ran++ + 1;
       this.setState({ questiontext: "Wrong!" });
-      this.setState({ cquestioncolor: "red" });
-      this.setState({ rscorebored: tra });
+      this.setState({ questioncolor: "red" });
+      this.setState({});
       console.log(tra + " rong");
     }
   }
@@ -65,7 +63,10 @@ class Question extends Component {
           />
         </div>
         <Reset />
-        <Score />
+        <Score
+          scorenumber={this.props.currentQuestion.cscorebored}
+          acor={this.props.currentQuestion.cscorebored}
+        />
       </div>
     );
   }
