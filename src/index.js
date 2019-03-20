@@ -23,4 +23,3 @@ function timer() {
 }
 
 timer();
-var cnum = 0;

@@ -5,30 +5,34 @@ import Answer from "./Answer.jsx";
 import Score from "./score.jsx";
 
 // import components
-
+var can = 0;
+var ran = 0;
 class Question extends Component {
   constructor(props) {
     super(props);
     this.state = {
       questioncolor: this.props.currentQuestion.questioncolor,
       question_text: this.props.currentQuestion.question_text,
-      scorebored: this.props.scorebored
+      cscorebored: this.props.cscorebored,
+      rscorebored: this.props.rcorebored
     };
   }
   handleClick(index) {
     var ca = this.props.currentQuestion.correct_choice_index;
 
     if (index === ca) {
-      var ahhs = cnum + 1;
+      var tca = can++ + 1;
       this.setState({ questiontext: "correct answer" });
       this.setState({ questioncolor: "green" });
-      this.setState({ uscore: ahhs });
-      console.log(ahhs);
+      this.setState({ cscorebored: tca });
+
+      console.log(tca + "corect");
     } else if (index !== ca) {
+      var tra = ran++ + 1;
       this.setState({ questiontext: "Wrong!" });
-      this.setState({ questioncolor: "red" });
-      this.setState({ uscore: cnum + 1 });
-      console.log(cnum + 1);
+      this.setState({ cquestioncolor: "red" });
+      this.setState({ rscorebored: tra });
+      console.log(tra + " rong");
     }
   }
 
